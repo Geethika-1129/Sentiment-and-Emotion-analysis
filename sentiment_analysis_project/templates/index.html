@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment and Emotion Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            max-width: 600px;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .results p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment and Emotion Analysis</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="text">Enter Text for Sentiment Analysis:</label>
+            <textarea name="text" id="text" rows="4" placeholder="Type your text here..."></textarea>
+        </div>
+        <div>
+            <label for="image">Upload Image for Emotion Detection:</label>
+            <input type="file" name="image" id="image" accept="image/*">
+        </div>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div class="results">
+        <h2>Results:</h2>
+        {% if prediction %}
+            <p><strong>Sentiment:</strong> {{ prediction }}</p>
+        {% endif %}
+        {% if image_result %}
+            <p><strong>Emotion:</strong> {{ image_result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
