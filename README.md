@@ -1,1 +1,2 @@
-# Sentiment-and-Emotion-analysis
+This project focuses on real-time Sentiment and Emotion Analysis using both text and facial expressions. By integrating NLP models for sentiment detection and facial emotion recognition using computer vision, the system can accurately interpret human emotions from input text or images. Built using Python, Flask, TensorFlow.js, and FER, this project demonstrates a multimodal Al approach for analyzing user feedback or reactions.
+Look this project video:https://www.linkedin.com/posts/geethika-boddupalli-451916324_excited-to-share-my-latest-project-on-activity-7336751033257222145-NdFb?utm_source=share&utm_medium=member_android&rcm=ACoAAFIBZ_0BJtX-4Jl7C21b-6RFdvqHn_UMy9E
